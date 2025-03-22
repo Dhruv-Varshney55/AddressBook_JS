@@ -124,3 +124,23 @@ function editContact(findName, editedVariable, variableNewValue){
         })
     }
 }
+
+
+
+
+
+// UC5 (Delete contact)
+
+function deleteContact(first_Name){
+    if(addressBook.length == null){
+        console.log("Add contact in address book");
+    }
+    else{
+        for(let i=0; i <addressBook.length ; i++){
+            if(addressBook[i].firstName == first_Name){
+                addressBook.splice(i, 1);
+                console.log("Contact deleted successfully");
+            }
+        }
+    }
+}
