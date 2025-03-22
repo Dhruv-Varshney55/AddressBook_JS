@@ -174,7 +174,7 @@ function isDuplicate(firstName) {
 
 
 
-// UC8 (Search contact with city or state)
+// UC8 (Search contact by city or state)
 
 function searchByCity_State(choice , name){
     if(choice == "city"){
@@ -186,6 +186,28 @@ function searchByCity_State(choice , name){
     else if(choice == "state"){
         person = addressBook.filter(contact => contact.state == name)
         .map(contact => contact.firstName);
+        console.log("Contact found from " + name);
+        console.log(person);
+    }
+    else{
+        console.log("Invalid city or state");
+    }
+}
+
+
+
+
+
+// UC9 (View contact by city or state)
+ 
+function viewByCity_State(choice, name){
+    if(choice == "city"){
+        person = addressBook.filter(contact => contact.city == name)
+        console.log("Contact found from " + name);
+        console.log(person);
+    }
+    else if(choice == "state"){
+        person = addressBook.filter(contact => contact.state == name)
         console.log("Contact found from " + name);
         console.log(person);
     }
