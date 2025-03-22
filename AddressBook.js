@@ -169,3 +169,27 @@ function isDuplicate(firstName) {
     let duplicateCount = duplicates.reduce((count) => count + 1, 0);
     return duplicateCount > 0;
 }
+
+
+
+
+
+// UC8 (Search contact with city or state)
+
+function searchByCity_State(choice , name){
+    if(choice == "city"){
+        person = addressBook.filter(contact => contact.city == name)
+        .map(contact => contact.firstName);
+        console.log("Contact found from " + name);
+        console.log(person);
+    }
+    else if(choice == "state"){
+        person = addressBook.filter(contact => contact.state == name)
+        .map(contact => contact.firstName);
+        console.log("Contact found from " + name);
+        console.log(person);
+    }
+    else{
+        console.log("Invalid city or state");
+    }
+}
