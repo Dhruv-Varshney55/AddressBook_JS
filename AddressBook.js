@@ -71,3 +71,12 @@ function contactDetails(firstName, lastName, address, state, city, zipCode, emai
         }
     }   
 }
+
+
+
+
+
+// UC3 (Add contact) 
+
+contactDetails('Dhruv', 'Varshney', 'Chamad gate', 'Uttar Pradesh', 'Hathras', "204101", 'dhruv@gmail.com', "8427749249");
+console.log(addressBook);
