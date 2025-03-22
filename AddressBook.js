@@ -144,3 +144,15 @@ function deleteContact(first_Name){
         }
     }
 }
+
+
+
+
+
+// UC6 (Find number of contacts using reduce function)
+
+function numberOfContacts(){
+    return addressBook.reduce((total) => total + 1, 0);
+}
+
+console.log("Total contacts : " + numberOfContacts());
