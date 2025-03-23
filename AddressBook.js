@@ -237,3 +237,23 @@ function countContactInCity_State(choice , name){
         console.log("Invalid city or state");
     }
 }
+
+
+
+
+
+// UC11 (Sort contacts by name)
+
+function sortContact(){
+    console.log(addressBook.sort((newContact1, newContact2) => {
+        if(newContact1.firstName < newContact2.firstName){
+            return -1;
+        }
+        else if(newContact1.firstName == newContact2.firstName){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }));
+}
