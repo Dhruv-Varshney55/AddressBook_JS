@@ -215,3 +215,25 @@ function viewByCity_State(choice, name){
         console.log("Invalid city or state");
     }
 }
+
+
+
+
+
+// UC10 (Count contact by city or state)
+
+function countContactInCity_State(choice , name){
+    if(choice == "city"){
+        person = addressBook.filter(contact => contact.city == name)
+        .reduce(() => { count++;},count = 0);
+        console.log("Total contact found from " + name + " are " + count);
+    }
+    else if(choice == "state"){
+        person = addressBook.filter(contact => contact.state == name)
+        .reduce(() => { count++;},count = 0);
+        console.log("Total contact found from " + name + " are " + count);
+    }
+    else{
+        console.log("Invalid city or state");
+    }
+}
