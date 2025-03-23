@@ -245,11 +245,48 @@ function countContactInCity_State(choice , name){
 // UC11 (Sort contacts by name)
 
 function sortContact(){
-    console.log(addressBook.sort((newContact1, newContact2) => {
-        if(newContact1.firstName < newContact2.firstName){
+    console.log(addressBook.sort((contact1, contact2) => {
+        if(contact1.firstName < contact2.firstName){
             return -1;
         }
-        else if(newContact1.firstName == newContact2.firstName){
+        else if(contact1.firstName == contact2.firstName){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }));
+}
+
+
+
+
+
+// UC12 (Sort contacts by city, state and zip)
+ 
+function sortContact(choice){
+    console.log(addressBook.sort((contact1, contact2) => {
+        switch(choice){
+            case "city":
+                first = contact1.city;
+                second = contact2.city;
+                break;
+            case  "state":
+                first = contact1.state;
+                second = contact2.state;
+                break;
+            case "zipCode":
+                first = contact1.zipCode;
+                second = contact2.zipCode;
+                break;
+            default:
+                console.log("Invalid city, state and zip code")
+        }
+   
+        if(first < second){
+            return -1;
+        }
+        else if(first == second){
             return 0;
         }
         else{
